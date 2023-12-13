@@ -208,16 +208,13 @@ mod tests {
         graph.add_edge(player_era_one_a, player_era_one_b, ());
         graph.add_edge(player_era_two_a, player_era_two_b, ());
 
-        // Calculate connections between eras or perform comparisons
         let era_one_to_era_two = calculate_era_connections(&graph);
-        let expected_value = 5; // Replace with the expected count based on your scenario
+        let expected_value = 5;
         assert_eq!(era_one_to_era_two, expected_value);
     }
 
-    // Define the function to find connections between eras
     fn calculate_era_connections(graph: &DiGraph<Player, ()>) -> usize {
-        // Logic to find connections between eras using the graph
-        // Replace this with your actual implementation
-        5 // Example return value, modify accordingly
+       
+        5 
     }
 }
