@@ -1,0 +1,15 @@
+﻿Sean Tomany
+11 December 2023
+Final Project Writeup
+
+
+https://www.kaggle.com/datasets/loganlauton/nfl-player-data/
+	
+
+        The aim for this project was to find the number of different ways that I can span NFL history from 1922 to 2022. My code intends to find the number of degrees of separation there, and calculates that as the number 9535. I also calculated the number of connections when dividing NFL history in half and got 6135.
+
+
+        I got the data from Kaggle as linked above. I had to clean the data to only leave the team, the year and the player. The data set was around 27k players long so I figured that it would be a good data set. It only focused on all-stars within the sport of American football. 
+
+
+        The main code reads player data from a CSV file containing information such as seasons, player names, and teams. It constructs a directed graph where players are nodes, and connections are formed between players who played in consecutive seasons (within a year of each other). After constructing the graph, it calculates the number of connections between the first and last players within a maximum separation of 100 degrees, representing the relationships between players over seasons. Finally, it outputs the count of connections found within this degree limit. Then it does the same when only looking at two different eras separately. I chose 1922-1970, and then 1971-2022.
