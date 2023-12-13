@@ -128,7 +128,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
 
-    // Calculate degrees of separation within 100 degrees
     let last_player_name = player_data.last().unwrap().1.clone();
     let first_player_name = player_data.first().unwrap().1.clone();
 
@@ -139,7 +138,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     println!("Number of connections within 100 degrees: {}", result.len());
 
-    // Comparison of connections between Era One and Era Two
     let era_one = (1922, 1970);
     let era_two = (1971, 2022);
 
@@ -159,14 +157,14 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     for &player in &era_one_players {
         if let Some(&node) = player_indices.get(player) {
-            let connections = bfs(&graph, node, 6); // Adjust the degrees as needed
+            let connections = bfs(&graph, node, 6); 
             era_one_connections.extend(connections);
         }
     }
 
     for &player in &era_two_players {
         if let Some(&node) = player_indices.get(player) {
-            let connections = bfs(&graph, node, 6); // Adjust the degrees as needed
+            let connections = bfs(&graph, node, 6); // 
             era_two_connections.extend(connections);
         }
     }
